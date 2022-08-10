@@ -6,20 +6,28 @@
 
 # opens a file as a string without lines or punctuation, split and lowercased
 # Need to manage - and 's words
-import string
+# import string
 
-with open('one-today.txt', 'r') as file:
-    doc_string = file.read().replace('\n', ' ')
-    for character in string.punctuation:
-        doc_string = doc_string.replace(character, ' ')
-    words = doc_string.lower().split()
+# with open('one-today.txt', 'r') as file:
+#     doc_string = file.read().replace('\n', ' ')
+#     for character in string.punctuation:
+#         doc_string = doc_string.replace(character, ' ')
+#     words = doc_string.lower().split()
 
-print(words)
+# print(words)
 # print(type(string.punctuation))
 
 
 # testing
-# list_of_words = ["hello", "world", "again", "hello", "world", "a", "the", "hello", "world", "again"]
+list_of_words = ["hello", "world", "again", "hello", "world", "a", "the", "hello", "world", "again"]
 
 # for word in list_of_words:
 #     print(f'{word} number of times: {list_of_words.count(word)}')
+
+txt_doc = {}
+
+for word in list_of_words:
+    txt_doc[word] = list_of_words.count(word)
+
+for key, value in txt_doc.items():
+    print(key, " | ", value, ("*" * value))
