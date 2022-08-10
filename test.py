@@ -33,36 +33,36 @@
 #     "again"
 #         ]
 
-txt_doc = {}
+# txt_doc = {}
 
-for word in list_of_words:
-    txt_doc[word] = list_of_words.count(word)
+# for word in list_of_words:
+#     txt_doc[word] = list_of_words.count(word)
 
-for key, value in txt_doc.items():
-    print(key, " | ", value, ("*" * value))
+# for key, value in txt_doc.items():
+#     print(key, " | ", value, ("*" * value))
 
 
 # testing for stop words
-STOP_WORDS = [
-    'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he',
-    'i', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'were',
-    'will', 'with'
-]
+# STOP_WORDS = [
+#     'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he',
+#     'i', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'were',
+#     'will', 'with'
+# ]
 
-list_of_words = [
-    "hello",
-    "world",
-    "again",
-    "hello",
-    "world",
-    "a",
-    "the",
-    "hello",
-    "world",
-    "again",
-    "the",
-    "a"
-        ]
+# list_of_words = [
+#     "hello",
+#     "world",
+#     "again",
+#     "hello",
+#     "world",
+#     "a",
+#     "the",
+#     "hello",
+#     "world",
+#     "again",
+#     "the",
+#     "a"
+#         ]
 
 
 # for word in STOP_WORDS:

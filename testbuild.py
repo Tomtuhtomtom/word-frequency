@@ -6,7 +6,7 @@ STOP_WORDS = [
     'will', 'with'
 ]
 
-with open('praise_song_for_the_day.txt', 'r') as file:
+with open('simple-test-file.txt', 'r') as file:
     doc_string = file.read().replace('\n', ' ')
     for character in string.punctuation:
         doc_string = doc_string.replace(character, ' ')
@@ -22,6 +22,3 @@ for word in doc_words:
 
 for key, value in txt_doc.items():
     print(key, " | ", value, ("*" * value))
-
-
-# print(doc_words)
