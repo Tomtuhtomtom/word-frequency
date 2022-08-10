@@ -4,7 +4,8 @@
 # Need to count number of times each word is used
 # Need to print out word | # & * x #
 
-# opening a file as a string without lines or punctuation, split and lowercased
+# opens a file as a string without lines or punctuation, split and lowercased
+# Need to manage - and 's words
 import string
 
 with open('one-today.txt', 'r') as file:
@@ -14,5 +15,11 @@ with open('one-today.txt', 'r') as file:
     words = doc_string.lower().split()
 
 print(words)
+# print(type(string.punctuation))
 
-#testing
+
+# testing
+# list_of_words = ["hello", "world", "again", "hello", "world", "a", "the", "hello", "world", "again"]
+
+# for word in list_of_words:
+#     print(f'{word} number of times: {list_of_words.count(word)}')
