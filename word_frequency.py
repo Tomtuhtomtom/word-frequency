@@ -40,8 +40,9 @@ def print_word_freq(file):
     # use dictiionary to format result printout
     for key, value in sorted_dict.items():
         stars = "*" * value
-        result = f'\t{key} | {value} {stars}'
-        print(result.center(20, ' '))
+        # result = f'\t{key} | {value} {stars}'
+        # print(result.center(20, ' '))
+        print('{:>15}{:>2}{:>3}{:^1}{:<4}'.format(key, "|", value, " ", stars))
 
 
 if __name__ == "__main__":
