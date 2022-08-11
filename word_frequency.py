@@ -35,13 +35,12 @@ def print_word_freq(file):
     for word in doc_words:
         txt_doc[word] = doc_words.count(word)
     # sorting dictionary
-    sorted_tuples = sorted(txt_doc.items(), key=lambda item: item[1], reverse = True)
-    sorted_dict = {k: v for k, v in sorted_tuples}
-    # use dictiionary to format result printout
+    srt_tuple = sorted(txt_doc.items(), key=lambda item: item[1], reverse=True)
+    sorted_dict = {k: v for k, v in srt_tuple}
+    # use dictiionary to gather results for printout
     for key, value in sorted_dict.items():
         stars = "*" * value
-        # result = f'\t{key} | {value} {stars}'
-        # print(result.center(20, ' '))
+        # print results with format for each entry
         print('{:>15}{:>2}{:>3}{:^1}{:<4}'.format(key, "|", value, " ", stars))
 
 
