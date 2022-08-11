@@ -17,11 +17,11 @@ def print_word_freq(file):
     with open(file, 'r') as txt_file:
         # python reads the txt file, replaces \n if necessary
         # and puts in in doc_string
-        doc_string = txt_file.read().replace('\n', ' ')
-        # my_punctuation is string punctuation but keeps the 
+        doc_string = txt_file.read().replace('\n', ' ').replace("'s", '')
+        # my_punctuation is string punctuation but keeps the
         # apostropes by cutting them out
         my_punctuation = string.punctuation.replace("'", "")
-        # for in goes through and edits out any punctuation 
+        # for in goes through and edits out any punctuation
         for character in my_punctuation:
             doc_string = doc_string.replace(character, ' ')
         # splitting the string into a list of lowercase words
