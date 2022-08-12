@@ -18,8 +18,9 @@ def print_word_freq(file):
         # python reads the txt file, replaces \n if necessary
         # and puts in in doc_string
         doc_string = txt_file.read().replace('\n', ' ').replace("'s", '')
+        doc_string = doc_string.replace('-', ' ')
         # my_punctuation is string punctuation but keeps the
-        # apostropes by cutting them out
+        # apostropes by cutting them out of the characters
         my_punctuation = string.punctuation.replace("'", "")
         # for in goes through and edits out any punctuation
         for character in my_punctuation:
