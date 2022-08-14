@@ -1,6 +1,6 @@
 
-# needed to import string for the punctuation
-import string
+# needed to import re for the punctuation
+import re
 
 # Given list of stop words
 STOP_WORDS = [
@@ -16,15 +16,13 @@ def print_word_freq(file):
     # with open is used to open and close the txt file when done
     with open(file, 'r') as txt_file:
         # python reads the txt file, replaces \n if necessary
-        # and puts in in doc_string
+        # removes the 's from words and puts in in doc_string
         doc_string = txt_file.read().replace('\n', ' ').replace("'s", '')
-        doc_string = doc_string.replace('-', ' ')
-        # my_punctuation is string punctuation but keeps the
-        # apostropes by cutting them out of the characters
-        my_punctuation = string.punctuation.replace("'", "")
-        # for in goes through and edits out any punctuation
-        for character in my_punctuation:
-            doc_string = doc_string.replace(character, ' ')
+        # re.sub checks for anything that is not a word or space
+        # and replaces them with a space, getting rid of punctuation
+        doc_string = re.sub(r'[^\w\s]', ' ', doc_string)
+        # puts 't back on the end of words
+        doc_string = doc_string.replace(" t ", "'t ")
         # splitting the string into a list of lowercase words
         doc_words = doc_string.lower().split()
         # filter out the stop words
