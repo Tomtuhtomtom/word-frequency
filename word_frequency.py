@@ -22,7 +22,7 @@ def print_word_freq(file):
         # and replaces them with a space, getting rid of punctuation
         doc_string = re.sub(r'[^\w\s]', ' ', doc_string)
         # puts 't back on the end of words
-        doc_string = doc_string.replace(" t ", "'t ")
+        doc_string = doc_string.replace(" t ", "'t ").replace(" o ", " o'")
         # splitting the string into a list of lowercase words
         doc_words = doc_string.lower().split()
         # filter out the stop words
